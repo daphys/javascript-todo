@@ -1,3 +1,3 @@
 # to-do
-first salfe-made to-do list :)
+first selfe-made to-do list :)
 trying in JS
