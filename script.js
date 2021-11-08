@@ -4,6 +4,8 @@ let arr = [];
 let text = document.getElementById('main');
 
 function makeToList() {
+
+
     // let newArr = new Array()
     // newArr.push(inputTo.value);
     // let newElem = document.createElement('div');
@@ -12,15 +14,18 @@ function makeToList() {
     // newElem.innerHTML = newArr;
     // console.log(newArr);
     
+
     if (inputTo.value == 0) {
-        alert('Добавьте пожалуйста вашу задачу');
+        // alert('Добавьте пожалуйста вашу задачу');
+        text.innerHTML = 'Please enter your task'
     } else{
         let newArr = new Array()
         newArr.push(inputTo.value);
+
         let newElem = document.createElement('div');
         newElem.className = 'newElement';
         document.body.append(newElem);
-        newElem.innerHTML = newArr;
+        newElem.innerHTML = `${newArr}`;
         console.log(newArr);
     }
 }
