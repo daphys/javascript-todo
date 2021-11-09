@@ -16,9 +16,9 @@ function makeToList() {
     
 
     if (inputTo.value == 0) {
-        // alert('Добавьте пожалуйста вашу задачу');
         text.innerHTML = 'Please enter your task'
-    } else{
+    } else if (inputTo.value >= 42){
+        text.innerHTML = null
         let newArr = new Array()
         newArr.push(inputTo.value);
 
@@ -26,6 +26,19 @@ function makeToList() {
         newElem.className = 'newElement';
         document.body.append(newElem);
         newElem.innerHTML = `${newArr}`;
+        newElem.style.height = "120px"
+    } 
+    else  {
+        text.innerHTML = null
+
+        let newArr = new Array()
+        newArr.push(inputTo.value);
+
+        let newElem = document.createElement('div');
+        newElem.className = 'newElement';
+        document.body.append(newElem);
+        newElem.innerHTML = `${newArr}`;
+
         console.log(newArr);
     }
 }
