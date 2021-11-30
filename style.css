@@ -42,7 +42,7 @@ body{
     height: 60px;
     margin-top: 20px;
     background-color: #57C970;
-    color: black;
+    color: rgb(27, 26, 26);
     padding: 3px;
     text-align: left;
     border: solid 7px;
@@ -53,3 +53,11 @@ body{
     background-color: #57C970;
 }
 
+
+
+@media (max-width: 710px) {
+    #input{
+        width: 500px;
+        align-items: center;
+    }
+}

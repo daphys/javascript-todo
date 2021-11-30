@@ -17,16 +17,17 @@ function makeToList() {
 
     if (inputTo.value == 0) {
         text.innerHTML = 'Please enter your task'
-    } else if (inputTo.value >= 42){
+     }  else if ((inputTo.value).length >= 42){
         text.innerHTML = null
-        let newArr = new Array()
+        let newArr = new Array();
         newArr.push(inputTo.value);
-
         let newElem = document.createElement('div');
         newElem.className = 'newElement';
         document.body.append(newElem);
         newElem.innerHTML = `${newArr}`;
         newElem.style.height = "120px"
+
+       
     } 
     else  {
         text.innerHTML = null
