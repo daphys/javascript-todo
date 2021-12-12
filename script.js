@@ -42,9 +42,12 @@ let m = () => {
         let newArr = new Array()
         newArr.push(inputTo.value);
         let newElem = document.createElement('div');
+        // let but = document.createElement('button');
+        // but.className = 'bN'
+        // document.body.append('bn')
         newElem.className = 'newElement';
         document.body.append(newElem);
-        newElem.innerHTML = `${newArr} `;
+        newElem.innerHTML = `${newArr}`;
         
         console.log(newArr);
         
@@ -53,8 +56,6 @@ let m = () => {
         localStorage.setItem(newArr, '');
     }
 }
-
-
 
 
 
