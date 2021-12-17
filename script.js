@@ -3,11 +3,7 @@ let buttonTo = document.getElementById('button');
 let arr = [];
 let text = document.getElementById('main');
 
-let button = () => {
-
-}
-
-let m = () => {
+function m(){
 
 
     // let newArr = new Array()
@@ -34,6 +30,7 @@ let m = () => {
     
     } 
     else  {
+        let del = document.getElementById('del')
         text.innerHTML = null
         // let deletebutton = document.createElement('button')
         // deletebutton.className = 'deletedButton'
@@ -42,20 +39,25 @@ let m = () => {
         let newArr = new Array()
         newArr.push(inputTo.value);
         let newElem = document.createElement('div');
-        // let but = document.createElement('button');
-        // but.className = 'bN'
-        // document.body.append('bn')
         newElem.className = 'newElement';
         document.body.append(newElem);
-        newElem.innerHTML = `${newArr}`;
-        
+        newElem.innerHTML = `${newArr} <button id="del">-</button>`;
         console.log(newArr);
+
+        function bu(){
+            newElem.remove();
+            console.log('da')
+        }
+
         
         inputTo.value = '';
 
-        localStorage.setItem(newArr, '');
+        }
+
+        
+            del.addEventListener('click', bu)
     }
-}
+
 
 
 
